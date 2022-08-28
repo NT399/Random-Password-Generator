@@ -14,22 +14,22 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 
-var options = {
-numbers: ['1','2','3','4','5','6','7','8','9'],
-letters: ['a','b','c','d','e','f','g','h'],
-SpecialCharacters: ['!', '@','#']
-};
+var numbers = ['1','2','3','4','5','6','7','8','9'];
+var letters = ['a','b','c','d','e','f','g','h', 'i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+var SpecialCharacters = ['!', '@','#','$','%','^','&','*','(',')','-','_','=','+','[',']','{','}',':',';','"','<','>',',','.','/','?','|','*','~','`'];
 
 var startPasswordGeneration = function() {
-  var userChoice1 = window.prompt("Enter password length");
-  var userChoice2 = window.prompt("Select type of characters")
+  var length = window.prompt("Enter password length");
+  var lowercase = window.confirm("Lowercase letter?");
+  var uppercase = window.confirm("Uppercase?");
+  var specialCharacters = window.confirm("Special characters?")
 
-  if (!userChoice1) {
-    return;
+  if (lowercase = true) {
+    console.log("placeholder - to update the code")
   }
 
-  var index = Math.floor(Math.random() * userChoice1);
-  var FinalPassword = options.numbers[index];
+  var index = Math.floor(Math.random() * length);
+  var FinalPassword = numbers[index];
 
   window.alert(FinalPassword);
 
