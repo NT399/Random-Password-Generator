@@ -17,13 +17,42 @@ var startPasswordGeneration = function() {
     window.alert("Please enter a length that is 8 or more characters and 128 or less characters")
     startPasswordGeneration()
   }
+
+  //Whether to include lowercase letters
   var lowercase = window.confirm("Would you like the password to include lowercase letters?");
+  // validation of input
+  if (lowercase == true) {
+    window.alert("Lowercase letters will be included");
+  } else {
+    window.alert("Lowercase letters will not be included")}
+
+  //Whether to include uppercase letters
   var uppercase = window.confirm("Would you like the password to include uppercase letters?");
+  // validation of input
+  if (uppercase == true) {
+    window.alert("Uppercase letters will be included");
+  } else {
+    window.alert("Uppercase letters will not be included")}
+  
+  //Whether to include special characters
   var specialCharacters = window.confirm("Would you like the password to include special characters?");
+    // validation of input
+  if (specialCharacters == true) {
+    window.alert("Special characters will be included");
+  } else {
+    window.alert("Special characters will not be included")}
+
+  //Whether to include numbers
   var numbers = window.confirm("Would you like the password to include numbers?");
+  // validation of input
+  if (numbers == true) {
+    window.alert("Numbers will be included");
+  } else {
+    window.alert("Numbers will not be included")}
+
   var finalPassword = [];
 
-//Concatenating preferences to a variable 'possibleCharacters'
+//Concatenating user preferences to a variable 'possibleCharacters'
   if (lowercase == true) {
     possibleCharacters=possibleCharacters.concat(lowercaseletters);
   } if (uppercase == true) {
